@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #111827;
+  color: white;
+  min-height: 100vh;
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.box {
+  width: 100%;
+  max-width: 850px;
+  background: #1f2937;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.3);
+}
+
+.outputBox {
+  height: 450px;
+  overflow-y: auto;
+  background: #111827;
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Chat messages */
+
+.user-msg,
+.ai-msg {
+  padding: 12px 16px;
+  border-radius: 16px;
+  max-width: 80%;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.user-msg {
+  align-self: flex-end;
+  background: #2563eb;
+}
+
+.ai-msg {
+  align-self: flex-start;
+  background: #374151;
+}
+
+#errorBox {
+  color: #ffb4b4;
+  margin-bottom: 10px;
+  min-height: 20px;
+}
+
+.inputCon {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+#inputBox {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+#ask {
+  border: none;
+  background: #f59e0b;
+  color: white;
+  padding: 0 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: .3s;
+}
+
+#ask:hover {
+  background: #d97706;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  flex: 1;
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #374151;
+  color: white;
+  transition: .3s;
+}
+
+.btn:hover {
+  background: #4b5563;
+}
+
+button:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .box {
+    padding: 15px;
+  }
+
+  .outputBox {
+    height: 350px;
+  }
+
+  .inputCon {
+    flex-direction: column;
+  }
+
+  #ask {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .user-msg,
+  .ai-msg {
+    max-width: 95%;
+  }
+}
